@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct MovieSearch2App: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      MovieListView()
     }
+  }
 }
