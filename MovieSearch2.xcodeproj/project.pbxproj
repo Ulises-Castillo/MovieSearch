@@ -15,7 +15,7 @@
 		1C78DCBF2B963F2400415D5E /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCBE2B963F2400415D5E /* MovieListResponse.swift */; };
 		1C78DCC22B963F5D00415D5E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCC12B963F5D00415D5E /* NetworkManager.swift */; };
 		1C78DCC42B963FCA00415D5E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCC32B963FCA00415D5E /* Endpoint.swift */; };
-		1C78DCC72B9640D100415D5E /* MovieListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCC62B9640D100415D5E /* MovieListService.swift */; };
+		1C78DCC72B9640D100415D5E /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCC62B9640D100415D5E /* MovieService.swift */; };
 		1C78DCCE2B9642CC00415D5E /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCCD2B9642CC00415D5E /* MovieListViewModel.swift */; };
 		1C78DCD12B96436800415D5E /* SinkCompletionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCD02B96436800415D5E /* SinkCompletionHandling.swift */; };
 		1C78DCD32B96458D00415D5E /* MovieListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCD22B96458D00415D5E /* MovieListViewModelFactory.swift */; };
@@ -27,6 +27,7 @@
 		1C78DCE62B964AC200415D5E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCE52B964AC200415D5E /* ImageCache.swift */; };
 		1C78DCEA2B964C7A00415D5E /* RemoteImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCE92B964C7A00415D5E /* RemoteImageViewModel.swift */; };
 		1C78DCEC2B964DB300415D5E /* RemoteImageViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCEB2B964DB300415D5E /* RemoteImageViewModelFactory.swift */; };
+		1C78DCEE2B96A9CB00415D5E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCED2B96A9CB00415D5E /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,7 @@
 		1C78DCBE2B963F2400415D5E /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
 		1C78DCC12B963F5D00415D5E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1C78DCC32B963FCA00415D5E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		1C78DCC62B9640D100415D5E /* MovieListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListService.swift; sourceTree = "<group>"; };
+		1C78DCC62B9640D100415D5E /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		1C78DCCD2B9642CC00415D5E /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		1C78DCD02B96436800415D5E /* SinkCompletionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinkCompletionHandling.swift; sourceTree = "<group>"; };
 		1C78DCD22B96458D00415D5E /* MovieListViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModelFactory.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		1C78DCE52B964AC200415D5E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		1C78DCE92B964C7A00415D5E /* RemoteImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageViewModel.swift; sourceTree = "<group>"; };
 		1C78DCEB2B964DB300415D5E /* RemoteImageViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageViewModelFactory.swift; sourceTree = "<group>"; };
+		1C78DCED2B96A9CB00415D5E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +125,7 @@
 		1C78DCC52B9640C200415D5E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				1C78DCC62B9640D100415D5E /* MovieListService.swift */,
+				1C78DCC62B9640D100415D5E /* MovieService.swift */,
 				1C78DCE22B9649E300415D5E /* ImageService.swift */,
 			);
 			path = Service;
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				1C78DCD02B96436800415D5E /* SinkCompletionHandling.swift */,
+				1C78DCED2B96A9CB00415D5E /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C78DCEE2B96A9CB00415D5E /* Logger.swift in Sources */,
 				1C78DCD52B9645F800415D5E /* MovieListCell.swift in Sources */,
 				1C78DCB02B963E9900415D5E /* MovieListView.swift in Sources */,
 				1C78DCE62B964AC200415D5E /* ImageCache.swift in Sources */,
@@ -328,7 +332,7 @@
 				1C78DCDF2B96499A00415D5E /* RemoteImage.swift in Sources */,
 				1C78DCEA2B964C7A00415D5E /* RemoteImageViewModel.swift in Sources */,
 				1C78DCC42B963FCA00415D5E /* Endpoint.swift in Sources */,
-				1C78DCC72B9640D100415D5E /* MovieListService.swift in Sources */,
+				1C78DCC72B9640D100415D5E /* MovieService.swift in Sources */,
 				1C78DCD12B96436800415D5E /* SinkCompletionHandling.swift in Sources */,
 				1C78DCBD2B963EB400415D5E /* Movie.swift in Sources */,
 			);

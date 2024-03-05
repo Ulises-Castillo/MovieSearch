@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-protocol MovieListService {
+protocol MovieService { // better off generic name movie service
   func getMovieList(endpoint: MovieListAPI) -> AnyPublisher<[Movie], Error>
 }
 
-struct MovieListServiceImpl: MovieListService {
+struct MovieServiceImpl: MovieService {
 
   private let networkManager: NetworkManager
 

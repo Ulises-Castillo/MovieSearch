@@ -11,11 +11,11 @@ import Combine
 class MovieListViewModel: ObservableObject, SinkCompletionHandling {
   @Published var movieList = [Movie]()
   @Published var searchText: String
-  private let service: MovieListService
+  private let service: MovieService
   private var currentPage = 1
   private var subs = Set<AnyCancellable>()
 
-  init(service: MovieListService, defaultSearch: String = "fire") {
+  init(service: MovieService, defaultSearch: String = "fire") {
     self.service = service
     self.searchText = defaultSearch
     subscribe()
@@ -23,6 +23,7 @@ class MovieListViewModel: ObservableObject, SinkCompletionHandling {
 
   private func subscribe() {
     $searchText
+      .removeDuplicates()
       .debounce(for: .seconds(0.25), scheduler: RunLoop.main)
       .sink(receiveValue: handleSearchText)
       .store(in: &subs)

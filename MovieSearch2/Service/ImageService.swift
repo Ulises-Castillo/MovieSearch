@@ -14,10 +14,10 @@ protocol ImageService {
 
 class ImageServiceImpl: ImageService, SinkCompletionHandling {
 
-  private let url: String
   private let networkManager: Downloader
-  private let cache: ImageCache
+  private let url: String
   private var sub: AnyCancellable?
+  private let cache: ImageCache
 
   init(url: String, networkManager: Downloader, cache: ImageCache) {
     self.url = url
@@ -27,7 +27,7 @@ class ImageServiceImpl: ImageService, SinkCompletionHandling {
 
   func getImage() -> AnyPublisher<UIImage?, Error> {
     if let cachedImage = cache.get(key: url) {
-      debugPrint("CACHE HIT")
+      log.info("Cache HIT 🏞️🎯")
 
       return Just(cachedImage)
         .setFailureType(to: Error.self)

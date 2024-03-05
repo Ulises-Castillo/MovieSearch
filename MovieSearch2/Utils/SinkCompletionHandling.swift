@@ -7,7 +7,7 @@
 
 import Combine
 
-protocol SinkCompletionHandling {
+protocol SinkCompletionHandling: Logging {
   func handleCompletion(completion: Subscribers.Completion<Error>)
 }
 
@@ -15,9 +15,9 @@ extension SinkCompletionHandling {
   func handleCompletion(completion: Subscribers.Completion<Error>) {
     switch completion {
     case .finished:
-      debugPrint("✅")
+      log.info("✅")
     case .failure(let error):
-      debugPrint("🚨 ERROR: \(error.localizedDescription)")
+      log.error("🚨 ERROR: \(error.localizedDescription)")
     }
   }
 }

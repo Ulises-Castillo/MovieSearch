@@ -24,11 +24,10 @@ struct SearchBar: View {
             .opacity(searchText == "" ? 0 : 1)
             .onTapGesture {
               searchText.removeAll()
-              isFocused = false
+              isFocused = true
             }
           ,alignment: .trailing
         )
-
     }
     .padding()
     .background(

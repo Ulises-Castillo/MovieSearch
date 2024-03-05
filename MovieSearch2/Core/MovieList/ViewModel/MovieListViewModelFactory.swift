@@ -11,7 +11,7 @@ struct MovieListViewModelFactory {
   static func make() -> MovieListViewModel {
     
     let networkManager = NetworkManagerImpl()
-    let movieListService = MovieListServiceImpl(networkManager: networkManager)
+    let movieListService = MovieServiceImpl(networkManager: networkManager)
     return MovieListViewModel(service: movieListService)
   }
 }
