@@ -7,7 +7,7 @@
 
 import Combine
 
-protocol SinkCompletionHandling: Logging {
+protocol SinkCompletionHandling: Loggable {
   func handleCompletion(completion: Subscribers.Completion<Error>)
 }
 

@@ -27,7 +27,7 @@
 		1C78DCE62B964AC200415D5E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCE52B964AC200415D5E /* ImageCache.swift */; };
 		1C78DCEA2B964C7A00415D5E /* RemoteImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCE92B964C7A00415D5E /* RemoteImageViewModel.swift */; };
 		1C78DCEC2B964DB300415D5E /* RemoteImageViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCEB2B964DB300415D5E /* RemoteImageViewModelFactory.swift */; };
-		1C78DCEE2B96A9CB00415D5E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCED2B96A9CB00415D5E /* Logger.swift */; };
+		1C78DCEE2B96A9CB00415D5E /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C78DCED2B96A9CB00415D5E /* Loggable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +52,7 @@
 		1C78DCE52B964AC200415D5E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		1C78DCE92B964C7A00415D5E /* RemoteImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageViewModel.swift; sourceTree = "<group>"; };
 		1C78DCEB2B964DB300415D5E /* RemoteImageViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageViewModelFactory.swift; sourceTree = "<group>"; };
-		1C78DCED2B96A9CB00415D5E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		1C78DCED2B96A9CB00415D5E /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +181,8 @@
 		1C78DCCF2B96435600415D5E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1C78DCED2B96A9CB00415D5E /* Loggable.swift */,
 				1C78DCD02B96436800415D5E /* SinkCompletionHandling.swift */,
-				1C78DCED2B96A9CB00415D5E /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C78DCEE2B96A9CB00415D5E /* Logger.swift in Sources */,
+				1C78DCEE2B96A9CB00415D5E /* Loggable.swift in Sources */,
 				1C78DCD52B9645F800415D5E /* MovieListCell.swift in Sources */,
 				1C78DCB02B963E9900415D5E /* MovieListView.swift in Sources */,
 				1C78DCE62B964AC200415D5E /* ImageCache.swift in Sources */,
