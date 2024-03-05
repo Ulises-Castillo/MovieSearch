@@ -31,7 +31,6 @@ struct NetworkManagerImpl: NetworkManager {
     return URLSession.shared.dataTaskPublisher(for: url)
       .retry(3)
       .tryMap{ $0.data }
-      .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()
   }
 }

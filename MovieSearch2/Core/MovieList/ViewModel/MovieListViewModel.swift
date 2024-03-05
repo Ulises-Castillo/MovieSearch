@@ -45,6 +45,7 @@ class MovieListViewModel: ObservableObject, SinkCompletionHandling {
     guard searchText.count > 2 else { return }
 
     service.getMovieList(endpoint: .getMovieList(searchText, currentPage))
+      .receive(on: DispatchQueue.main)
       .sink(receiveCompletion: handleCompletion, receiveValue: handleNewMovieList)
       .store(in: &subs)
   }

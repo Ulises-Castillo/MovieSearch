@@ -22,6 +22,7 @@ class RemoteImageViewModel: ObservableObject, SinkCompletionHandling {
   private func loadImage() {
     isLoading = true
     sub = service.getImage()
+      .receive(on: DispatchQueue.main)
       .sink(receiveCompletion: complete, receiveValue: handleImage)
   }
 
