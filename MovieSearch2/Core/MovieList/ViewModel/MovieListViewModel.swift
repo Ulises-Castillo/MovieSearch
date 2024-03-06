@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class MovieListViewModel: ObservableObject, SinkCompletionHandling {
-  @Published var movieList = [Movie]()
+  @Published private(set) var movieList = [Movie]()
   @Published var searchText: String
   private let service: MovieService
   private var currentPage = 1

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RemoteImage: View {
 
-  @StateObject var vm: RemoteImageViewModel
+  @StateObject private var vm: RemoteImageViewModel
 
   init(url: String) {
     _vm = StateObject(wrappedValue: RemoteImageViewModelFactory.make(url: url))

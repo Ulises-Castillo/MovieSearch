@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieListView: View {
 
-  @StateObject var vm = MovieListViewModelFactory.make()
+  @StateObject private var vm = MovieListViewModelFactory.make()
 
   var body: some View {
     NavigationView {

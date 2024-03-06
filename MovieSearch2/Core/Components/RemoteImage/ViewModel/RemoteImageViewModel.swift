@@ -9,8 +9,8 @@ import UIKit
 import Combine
 
 class RemoteImageViewModel: ObservableObject, SinkCompletionHandling {
-  @Published var image: UIImage?
-  @Published var isLoading = false
+  @Published private(set) var image: UIImage?
+  @Published private(set) var isLoading = false
   private let service: ImageService
   private var sub: AnyCancellable?
 
