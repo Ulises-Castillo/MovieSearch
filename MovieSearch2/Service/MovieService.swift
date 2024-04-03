@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol MovieService { // better off generic name movie service
+protocol MovieService {
   func getMovieList(endpoint: MovieListAPI) -> AnyPublisher<[Movie], Error>
 }
 
@@ -22,7 +22,7 @@ struct MovieServiceImpl: MovieService {
 
   func getMovieList(endpoint: MovieListAPI) -> AnyPublisher<[Movie], Error> {
     networkManager.getAndDecodeObjects(endPoint: endpoint)
-      .tryMap { $0 as MovieListResponse }
+      .map { $0 as MovieListResponse }
       .map { $0.movies }
       .eraseToAnyPublisher()
   }

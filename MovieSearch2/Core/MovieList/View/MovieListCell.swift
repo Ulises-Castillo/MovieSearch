@@ -13,9 +13,9 @@ struct MovieListCell: View {
   var body: some View {
     HStack {
       RemoteImage(url: movie.imageUrl)
-        .scaledToFill()                 // CRUCIAL: scale to fill FIRST
-        .frame(width: 100, height: 100) // THEN, set frame
-        .cornerRadius(12)               // aspect ratio unchanged
+        .scaledToFill()
+        .frame(width: 100, height: 100)
+        .cornerRadius(12)
       VStack(alignment: .leading) {
         Text(movie.title)
           .font(.title3)

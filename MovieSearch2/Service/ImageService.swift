@@ -35,7 +35,7 @@ class ImageServiceImpl: ImageService, SinkCompletionHandling {
     }
 
     let pub = networkManager.download(url: URL(string: url))
-      .tryMap { UIImage(data: $0) }
+      .map { UIImage(data: $0) }
       .share()
 
     sub = pub

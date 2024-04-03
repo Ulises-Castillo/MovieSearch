@@ -16,8 +16,9 @@ struct SearchBar: View {
     HStack {
       Image(systemName: "magnifyingglass")
       TextField("Search..", text: $searchText)
+        .disableAutocorrection(true)
         .focused($isFocused)
-        .overlay(
+        .overlay(alignment: .trailing) {
           Image(systemName: "xmark.circle.fill")
             .padding()
             .offset(x: 15)
@@ -26,13 +27,16 @@ struct SearchBar: View {
               searchText.removeAll()
               isFocused = true
             }
-          ,alignment: .trailing
-        )
+        }
     }
     .padding()
     .background(
       RoundedRectangle(cornerRadius: 21)
-        .foregroundColor(.gray)
+        .fill(Color.gray)
+        .shadow(
+          color: .secondary.opacity(0.6),
+          radius: 10
+        )
     )
     .padding()
   }
@@ -41,3 +45,4 @@ struct SearchBar: View {
 #Preview {
   SearchBar(searchText: .constant(""))
 }
+
